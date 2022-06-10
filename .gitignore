@@ -27,6 +27,11 @@ gomi
 .DS_Store
 out
 nimos/public/*
+.temp
+.cache
+temp/
+cache/
+output/
 #####
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
