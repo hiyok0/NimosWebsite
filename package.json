@@ -1,0 +1,19 @@
+{
+  "name": "nimoswebsite",
+  "version": "0.0.1",
+  "description": "Docs for Nimos",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hiyok0/NimosWebsite.git"
+  },
+  "author": "hiyok0",
+  "bugs": {
+    "url": "https://github.com/hiyok0/NimosWebsite/issues"
+  },
+  "homepage": "https://github.com/hiyok0/NimosWebsite#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^9.1.0"
+  }
+}
