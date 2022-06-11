@@ -52,7 +52,7 @@ module.exports = {
       TwitterID: 'Jewel_Flash'
     }),
     socialSharePlugin({
-	  networks: [`twitter`, `email`, `telegram`, `reddit`, `skype`, `pinterest`, `linkedin`, `facebook`, `whatsapp`, `wechat`, `qq`, `weibo`, `line`, `douban`],
+	  networks: [`twitter`, `telegram`, `reddit`, `pinterest`, `linkedin`, `facebook`, `wechat`, `weibo`, `line`],
 	  email: `user@example.com`,
 	  twitterUser: `Jewel_Flash`
     })
