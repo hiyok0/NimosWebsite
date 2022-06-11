@@ -1,4 +1,5 @@
 const { defaultTheme } = require('@vuepress/theme-default')
+const { socialSharePlugin } = require(`vuepress-plugin-social-share`)
 
 module.exports = {
   lang: 'ja-JP',
@@ -44,5 +45,10 @@ module.exports = {
 		  }]
 	  }
     ],
-  })
+  }),
+  plugins: [socialSharePlugin({
+	  networks: [`twitter`, `email`, `telegram`, `reddit`, `skype`, `pinterest`, `linkedin`, `facebook`, `whatsapp`, `wechat`, `qq`, `weibo`, `line`, `douban`],
+	  email: `user@example.com`,
+	  twitterUser: `Jewel_Flash`
+  })]
 }

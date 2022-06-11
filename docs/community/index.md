@@ -11,7 +11,7 @@ hiyoko Project（今命名した）のサーバーです。サポートと言う
 
 ## Google Form
 コミュニティとはちょっと違うかもしれませんが、一方的なコミュニケーション（？）がとれます。なにか問題点を見つけたけどDiscordには参加したくないよってときなどにご活用ください。
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKhOCD_lNTRkiFTlN8EBMSuZUH-ikkNt94Vv4XySZwbi8YSQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdKhOCD_lNTRkiFTlN8EBMSuZUH-ikkNt94Vv4XySZwbi8YSQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">読込中またはiframe非対応ブラウザで閲覧中です。[こちらからも回答可能です。](https://docs.google.com/forms/d/e/1FAIpQLSdKhOCD_lNTRkiFTlN8EBMSuZUH-ikkNt94Vv4XySZwbi8YSQ/viewform)</iframe>
   
 必須じゃないところは書かなくても大丈夫です。このドキュメントについて問題報告をする場合もバグ報告で大丈夫です（その他でも可）。
 
