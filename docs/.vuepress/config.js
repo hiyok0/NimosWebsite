@@ -9,6 +9,7 @@ module.exports = {
   cache: "cache",
   temp: "temp",
   theme: defaultTheme({
+	contributors: false,
     navbar: [
 	  /*
       // NavbarItem
