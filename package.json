@@ -22,6 +22,7 @@
   "devDependencies": {
     "@vuepress/plugin-docsearch": "^2.0.0-beta.47",
     "vuepress": "^2.0.0-beta.46",
+    "vuepress-plugin-seo2": "^2.0.0-beta.79",
     "vuepress-plugin-social-share": "^2.0.0-beta.5"
   }
 }
