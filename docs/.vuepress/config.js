@@ -1,6 +1,5 @@
 const { defaultTheme } = require('@vuepress/theme-default');
 const { socialSharePlugin } = require(`vuepress-plugin-social-share`);
-const seo = require('vuepress-plugin-seo');
 
 module.exports = {
   lang: 'ja-JP',
@@ -10,6 +9,22 @@ module.exports = {
   dest: "output",
   cache: "cache",
   temp: "temp",
+  head: [
+    //favicon
+    ['link', { rel: 'icon', content: '/favicon.ico' }],
+    ['link', { rel: 'apple-touch-icon', content: '/apple-touch-icon.png' }],
+    //Open Graph protocol (includes Twitter card)
+    ['meta', { property: 'og:site_name', content: 'Nimos Docs' }],
+    ['meta', { property: 'og:description', content: 'NimosはmacOS上などでわんコメとVOICEVOXを繋げられるアプリケーションです。' }],
+    ['meta', { property: 'og:type', content: 'article' }],
+    ['meta', { property: 'og:image', content: '/assets/ogp.png' }],
+    ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { property: 'twitter:site', content: 'Jewel_Flash' }],
+    ['meta', { property: 'twitter:title', content: 'Nimos Docs' }],
+    ['meta', { property: 'twitter:description', content: 'NimosはmacOS上などでわんコメとVOICEVOXを繋げられるアプリケーションです。' }],
+    ['meta', { property: 'twitter:image', content: '/assets/ogp.png' }]
+    //example-->  ['link', { rel: 'icon', href: '/images/logooo.png' }]
+  ],
   theme: defaultTheme({
 	contributors: false,
 	domain: 'https://nimos.pages.dev',
@@ -49,10 +64,6 @@ module.exports = {
     ],
   }),
   plugins: [
-    seo({
-	  description: ($page, $site) => $page.frontmatter.description || ($page.excerpt && $page.excerpt.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, "")) || $site.description || "",
-      title: ($page, $site) => $page.title || $site.title
-    }),
     socialSharePlugin({
 	  networks: [`twitter`, `telegram`, `reddit`, `pinterest`, `linkedin`, `facebook`, `wechat`, `weibo`, `line`],
 	  email: `user@example.com`,
