@@ -28,6 +28,7 @@ module.exports = {
   ],
   theme: defaultTheme({
 	contributors: false,
+	logo: '/apple-touch-icon.png',			//無駄に大きいので後で考える
 	domain: 'https://nimos.pages.dev',
     navbar: [
 	  /*
