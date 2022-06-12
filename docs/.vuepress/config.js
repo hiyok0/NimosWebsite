@@ -12,7 +12,7 @@ module.exports = {
   temp: "temp",
   head: [
     //favicon
-    ['link', { rel: 'icon', href: '/favicon.ico' type: 'image/vnd.microsoft.icon' }],
+    ['link', { rel: 'icon', href: '/favicon.ico', type: 'image/vnd.microsoft.icon' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
     //Open Graph protocol (includes Twitter card)
     ['meta', { property: 'og:site_name', content: 'Nimos Docs' }],
