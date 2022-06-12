@@ -1,6 +1,6 @@
 const { defaultTheme } = require('@vuepress/theme-default');
 const { socialSharePlugin } = require(`vuepress-plugin-social-share`);
-const { seoPlugin } = require("vuepress-plugin-seo2");
+const seo = require('vuepress-plugin-seo');
 
 module.exports = {
   lang: 'ja-JP',
@@ -12,6 +12,7 @@ module.exports = {
   temp: "temp",
   theme: defaultTheme({
 	contributors: false,
+	domain: 'https://nimos.pages.dev',
     navbar: [
 	  /*
       // NavbarItem
@@ -48,8 +49,9 @@ module.exports = {
     ],
   }),
   plugins: [
-    seoPlugin({
-      TwitterID: 'Jewel_Flash'
+    seo({
+	  description: ($page, $site) => $page.frontmatter.description || ($page.excerpt && $page.excerpt.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, "")) || $site.description || "",
+      title: ($page, $site) => $page.title || $site.title
     }),
     socialSharePlugin({
 	  networks: [`twitter`, `telegram`, `reddit`, `pinterest`, `linkedin`, `facebook`, `wechat`, `weibo`, `line`],
