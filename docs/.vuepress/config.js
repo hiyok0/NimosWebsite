@@ -12,8 +12,8 @@ module.exports = {
   temp: "temp",
   head: [
     //favicon
-    ['link', { rel: 'icon', content: '/favicon.ico' }],
-    ['link', { rel: 'apple-touch-icon', content: '/apple-touch-icon.png' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' type: 'image/vnd.microsoft.icon' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
     //Open Graph protocol (includes Twitter card)
     ['meta', { property: 'og:site_name', content: 'Nimos Docs' }],
     ['meta', { property: 'og:description', content: 'NimosはmacOS上などでわんコメとVOICEVOXを繋げられるアプリケーションです。' }],
