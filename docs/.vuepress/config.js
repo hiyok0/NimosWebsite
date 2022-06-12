@@ -1,5 +1,6 @@
 const { defaultTheme } = require('@vuepress/theme-default');
 const { socialSharePlugin } = require(`vuepress-plugin-social-share`);
+const { searchPlugin } = require('@vuepress/plugin-search')
 
 module.exports = {
   lang: 'ja-JP',
@@ -64,6 +65,14 @@ module.exports = {
     ],
   }),
   plugins: [
+    searchPlugin({
+      locales: {
+        '/': {
+          placeholder: '検索',
+        }
+      },
+      maxSuggestions: 15
+	}),
     socialSharePlugin({
 	  networks: [`twitter`, `telegram`, `reddit`, `pinterest`, `linkedin`, `facebook`, `wechat`, `weibo`, `line`],
 	  email: `user@example.com`,
