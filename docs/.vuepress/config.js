@@ -18,12 +18,12 @@ module.exports = {
     ['meta', { property: 'og:site_name', content: 'Nimos Docs' }],
     ['meta', { property: 'og:description', content: 'NimosはmacOS上などでわんコメとVOICEVOXを繋げられるアプリケーションです。' }],
     ['meta', { property: 'og:type', content: 'article' }],
-    ['meta', { property: 'og:image', content: '/assets/ogp.png' }],
+    ['meta', { property: 'og:image', content: 'https://nimos.pages.dev/assets/ogp.png' }],
     ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { property: 'twitter:site', content: 'Jewel_Flash' }],
     ['meta', { property: 'twitter:title', content: 'Nimos Docs' }],
     ['meta', { property: 'twitter:description', content: 'NimosはmacOS上などでわんコメとVOICEVOXを繋げられるアプリケーションです。' }],
-    ['meta', { property: 'twitter:image', content: '/assets/ogp.png' }]
+    ['meta', { property: 'twitter:image', content: 'https://nimos.pages.dev/assets/ogp.png' }]
     //example-->  ['link', { rel: 'icon', href: '/images/logooo.png' }]
   ],
   theme: defaultTheme({
