@@ -51,16 +51,25 @@ title: 始める
 ##### mpvの入手
  
 ![mpv ioのinstallationのページ](/assets/getting-started/mpv-io-Installation.png)
-1.  [mpv.ioのinstallationのページ](https://mpv.io/installation/)にアクセスし、`macOS builds by stolendata`のリンクをクリックします。
-2. `mpv-latest.tar.gz`をダウンロード
+
+1.  [mpv.ioのinstallationのページ](https://mpv.io/installation/)にアクセスし、[`macOS builds by stolendata`](https://laboratory.stolendata.net/~djinn/mpv_osx/)のリンクをクリックします。
+
+2. [`mpv-latest.tar.gz`](https://laboratory.stolendata.net/~djinn/mpv_osx/mpv-latest.tar.gz)をダウンロード
+:::tip 参考
+HomeBrewやMacPortsを利用している場合はもちろんそちらで構いません。`macOS nightly builds by jnozsc`はもうアクティブではないようです（2022年6月15日確認）。
+:::
  ![mpvのビルドのダウンロードページ](/assets/getting-started/mpvsdlpage.png)
+
 3.ダウンロードしたtar.gzファイルを解凍（展開）すると、アプリケーション本体とmpvのドキュメントが入っています。  
 ![mpv-latest-tar-gz.png](/assets/getting-started/mpv-latest-tar-gz-extracted.png) 
+
 4. mpv本体をアプリケーションフォルダ(/Application)にコピーします（推奨。しなくても問題ない。）
-5. mpv.appを副クリックします。
+
+5. mpv.appを副クリックします。  
 ![mpv.appのコンテクストメニュー](/assets/getting-started/mpv-app-contextmenu.png)
 6. `パッケージの内容を表示`を選択
-7. 中にあるmpvというUnix実行ファイルなるものを確認します。これがどこにあるか、というのをこの後使います。
+
+7. 中にあるmpvというUnix実行ファイルなるものを確認します。これがどこにあるか、というのをこの後使います。  
 ![mpv.appの中を確認する](/assets/getting-started/mpv-hiraku.gif)
 
 ## Nimosのダウンロードと設定
