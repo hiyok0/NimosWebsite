@@ -42,28 +42,63 @@ title: 始める
 　macOSにプリインストールされているコマンド・アプリの中でこれができるものが見当たらなかったためインストールを求めています。後述のffplay等ライセンス的に同梱も不可能ではないはずですが、~~[恥の大広間](https://www.ffmpeg.org/shame.html)に載ったら恥ずかしいので~~ライセンスって地味に難しいのでちゃんと確認し、必要なライセンス表記に確信を持てるまでは同梱しません。
 
 ##### 「標準入力から再生できる実行ファイル」の例  
-
-  * [FFplay](https://ffmpeg.org/)(おすすめ)
-  * [mpv](https://mpv.io/)（使いやすい）
+  * [mpv](https://mpv.io/)（使いやすい、おすすめ）
+  * [FFplay](https://ffmpeg.org/)(できる……はず)
   * [VLC](https://www.videolan.org/)（できるはず（まだ未確認））
  
- 　ここでは一般的なffplayを用いて解説します。mpvやVLCでの方法は時間があるときに追記します。
+ 　ここではmpvで解説します。
+ 　
+##### mpvの入手
  
-##### 入手
-既にffplay含め条件を満たすものがインストール済みの場合はそのままで大丈夫です。
-1. [ static FFmpeg binaries for macOS 64-bit](https://evermeet.cx/ffmpeg/#ffplay)にアクセスし、FFplayをダウンロードします。左がスナップショットで右が最新版です。今回は最新版で説明しますが、新しいものにチャレンジしたい場合はスナップショットを試してみても良いでしょう。（バージョン番号などはその時により違います。）
-![](/assets/getting-started/download-ffplay-forMac-latest.png)
-:::warning Apple Silicon機について
-現在、ARMにネイティブ対応したffplayは配布されていません。ロゼッタを噛ませば動くのではないかなと勝手に想像していますが実機を持っていないため確認できていません。もし動いた・動かないなどわかった場合はDiscordでもフォームでも何でも構いませんので教えていただけると幸いです。  
-[hiyokoサポートサーバーに参加する（Discord）](https://discord.gg/veRBTjY8aK) /　 
-[Google Formで送信する ](https://docs.google.com/forms/d/e/1FAIpQLSdKhOCD_lNTRkiFTlN8EBMSuZUH-ikkNt94Vv4XySZwbi8YSQ/viewform)   
-参照：[Silicon ARM Info - static FFmpeg binaries for macOS 64-bit ](https://evermeet.cx/ffmpeg/apple-silicon-arm)
+![mpv ioのinstallationのページ](/assets/getting-started/mpv-io-Installation.png)
+1.  [mpv.ioのinstallationのページ](https://mpv.io/installation/)にアクセスし、`macOS builds by stolendata`のリンクをクリックします。
+2. `mpv-latest.tar.gz`をダウンロード
+ ![mpvのビルドのダウンロードページ](/assets/getting-started/mpvsdlpage.png)
+3.ダウンロードしたtar.gzファイルを解凍（展開）すると、アプリケーション本体とmpvのドキュメントが入っています。  
+![mpv-latest-tar-gz.png](/assets/getting-started/mpv-latest-tar-gz-extracted.png) 
+4. mpv本体をアプリケーションフォルダ(/Application)にコピーします（推奨。しなくても問題ない。）
+5. mpv.appを副クリックします。
+![mpv.appのコンテクストメニュー](/assets/getting-started/mpv-app-contextmenu.png)
+6. `パッケージの内容を表示`を選択
+7. 中にあるmpvというUnix実行ファイルなるものを確認します。これがどこにあるか、というのをこの後使います。
+![mpv.appの中を確認する](/assets/getting-started/mpv-hiraku.gif)
+
+## Nimosのダウンロードと設定
+1. [NimosのReleasesのページ](https://github.com/hiyok0/Nimos/releases)に行きます。
+2. 一番上にある（最新の）Nimos …… .zipという名前のファイルをダウンロードします。（次回以降はわかりやすいようにNimos+バージョン番号.zipにする予定です。）
+![mpv.appの中を確認する](/assets/getting-started/Nimos-Releases-Assets.png)
+3. ダウンロードしたzipファイルを解凍します。
+4. 出てきたNimosを必要に応じて移動します。
+:::tip 移動について
+そのままでも使えますが、/Applicationや~/Applicationに移動することでインストールできます。
 :::
-2. ダウンロードしたファイルを解凍（展開）します。
-![ダウンロードしたファイルを展開する](/assets/getting-started/extract-ffplay-zip.png)
+5. 副クリックで開くを選択し、起動します。
+![mpv.appの中を確認する](/assets/getting-started/open-nimos.png)
+6. 順番にこの様な警告が出ますが順番にクリックしていきます。ソースは公開しているので、もし不安な場合は[GitHub](https://github.com/hiyok0/Nimos/)で確認できます。
+![不明なアプリを開く警告](/assets/getting-started/systemwarn-open.png)
+![不明なアプリを起動する警告](/assets/getting-started/systemwarn-install.png)
+![不明なアプリを起動する警告](/assets/getting-started/systemwarn-firewall.png)
+7. 起動したら、Settingsを押して設定画面へ行きます。
+![Settingsをクリック](/assets/getting-started/nimos-click-settings.png)
+8. 再生コマンドを設定します
+![再生コマンドを設定](/assets/getting-started/nimos-set-playcommand.png)
+	* コマンドは`<先程のmpvのパス> -`です。
+	* `-`の前にスペースがあります。半角英数字です。
+9. 保存を押します。
+![設定を保存](/assets/getting-started/nimos-settings-save.png)
+10. 完了です。
+![設定完了](/assets/getting-started/nimos-applied.png)
 
-解凍して出てきたファイルは後で使います。覚えておいてください。
-![解凍（展開）して出てきた実行ファイル](/assets/getting-started/ffmplay-quicklook.png)
-
-## Nimosのダウンロード
-
+## わんコメ側の設定
+Nimosはわんコメには棒読みちゃんとして設定します。  
+![連携メニューを開く](/assets/getting-started/onecomme-menu-renkei.png)
+![連携メニュー](/assets/getting-started/onecomme-renkei.png)
+ポート番号はNimosのトップ画面のものと一致させてください。
+![連携メニュー](/assets/getting-started/nimos-portnumber-display.png)
+Nimos側のポート番号を変えることもできます（Nimosの再起動が必要です）。
+:::warning メモ
+詳しい変更方法は後で書く
+:::
+![ポート番号が変更になる表示](/assets/getting-started/nimos-port-change-display.png)
+  
+参考：[わんコメ公開ドキュメント「棒読みちゃん連携」](https://onecomme.notion.site/8ba47be790a8411fb293832f222cfd0b)
