@@ -16,7 +16,9 @@ title: 始める
 	1. 	例
 		* 	[mpv](https://mpv.io/)
 		*  	[FFplay(FFmpeg)](https://ffmpeg.org/)
-		*   もちろん、お好みのパッケージマネージャ等でインストールしたものを使うこともできます。初期設定のコマンドはHomeBrewでmpvをインストールした状態のものです。
+		*   [VLC(cvlc)](https://www.videolan.org/)
+		*   もちろん、お好みのパッケージマネージャ等でインストールしたものを使うこともできます。
+		*   初期設定のコマンドはHomeBrewでmpvをインストールした状態のものです。
 3. Nimosをダウンロード（必要に応じてインストール）する。
 	1. GitHubの[Releases](https://github.com/hiyok0/Nimos/releases)から最新版をダウンロードし起動。
 	2. 設定を開き必要事項を設定します。
@@ -28,13 +30,14 @@ title: 始める
 　このアプリは、２つ（再生に用いるものを含めると３つ）のアプリを連携させることを前提に作られています。そのため、単体では（起動はしますが）何にも使えません。ここでは、開発動機にもなったわんコメとVOICEVOXの連携を前提に説明します。また、既に最新版がインストールされているものは飛ばして大丈夫です。
 
 #### わんコメの用意
-　[わんコメの公式サイト](https://onecomme.com/)に行きダウンロードし、インストールします。ここまででつまずいた場合は[ドキュメント](https://onecomme.notion.site/onecomme/d04d95b33a03419c8924dad00f550006)を確認した上で解決しなければ[わんコメのフォーラム](https://forum.onecomme.com/)で質問してみましょう。私も回答しています。
+　[わんコメの公式サイト](https://onecomme.com/)に行きダウンロードし、インストールします。ここまででつまずいた場合は[ドキュメント](https://onecomme.notion.site/onecomme/d04d95b33a03419c8924dad00f550006)を確認し、その上で解決しなければ[わんコメのフォーラム](https://forum.onecomme.com/)で質問してみましょう。私も回答しています。
 
 #### VOICEVOXの用意
 　[VOICEVOX公式サイト](https://voicevox.hiroshiba.jp/)に行きダウンロードしましょう。細かい使い方やトラブルシューティングは他サイトに任せます。
 　ちなみに、本当にこれにしか使わない場合は[VOICEVOX ENGINE](https://github.com/VOICEVOX/voicevox_engine)と音声モデルのみで使うことができます。詳しくは[VOICEVOXの全体構成](https://github.com/VOICEVOX/voicevox/blob/main/docs/%E5%85%A8%E4%BD%93%E6%A7%8B%E6%88%90.md)をご覧ください。
 
 #### 標準入力から再生できる実行ファイル
+将来的にこのようなことをしなくても実行できる方法を考え中ですが、その場合であってもこれらのソフトを使うと楽に様々な設定ができますのでおすすめです。
 ##### 「標準入力から再生できる実行ファイル」とは
 　macOSにプリインストールされているコマンド・アプリの中でこれができるものが見当たらなかったためインストールを求めています。後述のffplay等ライセンス的に同梱も不可能ではないはずですが、~~[恥の大広間](https://www.ffmpeg.org/shame.html)に載ったら恥ずかしいので~~ライセンスって地味に難しいのでちゃんと確認し、必要なライセンス表記に確信を持てるまでは同梱しません。
 
@@ -44,9 +47,23 @@ title: 始める
   * [mpv](https://mpv.io/)（使いやすい）
   * [VLC](https://www.videolan.org/)（できるはず（まだ未確認））
  
- 　ここまで読んでなんだかわからない人はFFplayがおすすめです。mpvやVLCでの方法は時間があるときに追記します。
+ 　ここでは一般的なffplayを用いて解説します。mpvやVLCでの方法は時間があるときに追記します。
  
-# 後
-# で
-# 書
-# く
+##### 入手
+既にffplay含め条件を満たすものがインストール済みの場合はそのままで大丈夫です。
+1. [ static FFmpeg binaries for macOS 64-bit](https://evermeet.cx/ffmpeg/#ffplay)にアクセスし、FFplayをダウンロードします。左がスナップショットで右が最新版です。今回は最新版で説明しますが、新しいものにチャレンジしたい場合はスナップショットを試してみても良いでしょう。（バージョン番号などはその時により違います。）
+![](/assets/getting-started/download-ffplay-forMac-latest.png)
+:::warning Apple Silicon機について
+現在、ARMにネイティブ対応したffplayは配布されていません。ロゼッタを噛ませば動くのではないかなと勝手に想像していますが実機を持っていないため確認できていません。もし動いた・動かないなどわかった場合はDiscordでもフォームでも何でも構いませんので教えていただけると幸いです。  
+[hiyokoサポートサーバーに参加する（Discord）](https://discord.gg/veRBTjY8aK) /　 
+[Google Formで送信する ](https://docs.google.com/forms/d/e/1FAIpQLSdKhOCD_lNTRkiFTlN8EBMSuZUH-ikkNt94Vv4XySZwbi8YSQ/viewform)   
+参照：[Silicon ARM Info - static FFmpeg binaries for macOS 64-bit ](https://evermeet.cx/ffmpeg/apple-silicon-arm)
+:::
+2. ダウンロードしたファイルを解凍（展開）します。
+![ダウンロードしたファイルを展開する](/assets/getting-started/extract-ffplay-zip.png)
+
+解凍して出てきたファイルは後で使います。覚えておいてください。
+![解凍（展開）して出てきた実行ファイル](/assets/getting-started/ffmplay-quicklook.png)
+
+## Nimosのダウンロード
+
