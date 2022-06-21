@@ -77,26 +77,35 @@ HomeBrewやMacPortsを利用している場合はもちろんそちらで構い�
 2. 一番上にある（最新の）Nimos …… .zipという名前のファイルをダウンロードします。（次回以降はわかりやすいようにNimos+バージョン番号.zipにする予定です。）
 ![mpv.appの中を確認する](/assets/getting-started/Nimos-Releases-Assets.png)
 3. ダウンロードしたzipファイルを解凍します。
-4. 出てきたNimosを必要に応じて移動します。
+4. 出てきたNimosを必要に応じて移動します。　
 :::tip 移動について
 そのままでも使えますが、/Applicationや~/Applicationに移動することでインストールできます。  
 
 今後のアップデートで、/Application直下にmpvがインストールされた場合のパスのコマンドをデフォルトにする予定です。
 :::
+
 5. 副クリックで開くを選択し、起動します。
 ![mpv.appの中を確認する](/assets/getting-started/open-nimos.png)
+
 6. 順番にこの様な警告が出ますが順番にクリックしていきます。ソースは公開しているので、もし不安な場合は[GitHub](https://github.com/hiyok0/Nimos/)で確認できます。
 ![不明なアプリを開く警告](/assets/getting-started/systemwarn-open.png)
 ![不明なアプリを起動する警告](/assets/getting-started/systemwarn-install.png)
 ![不明なアプリを起動する警告](/assets/getting-started/systemwarn-firewall.png)
+
 7. 起動したら、Settingsを押して設定画面へ行きます。
 ![Settingsをクリック](/assets/getting-started/nimos-click-settings.png)
+
 8. 再生コマンドを設定します
 ![再生コマンドを設定](/assets/getting-started/nimos-set-playcommand.png)
 	* コマンドは`<先程のmpvのパス> -`です。
 	* `-`の前にスペースがあります。半角英数字です。
+:::tip パスが何かわからない場合
+うまく説明できないのでDiscordサーバーに来てください。
+:::
+
 9. 保存を押します。
 ![設定を保存](/assets/getting-started/nimos-settings-save.png)
+
 10. 完了です。
 ![設定完了](/assets/getting-started/nimos-applied.png)
 
