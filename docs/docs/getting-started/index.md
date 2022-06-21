@@ -72,14 +72,16 @@ HomeBrewやMacPortsを利用している場合はもちろんそちらで構い�
 7. 中にあるmpvというUnix実行ファイルなるものを確認します。これがどこにあるか、というのをこの後使います。  
 ![mpv.appの中を確認する](/assets/getting-started/mpv-hiraku.gif)
 
-## Nimosのダウンロードと設定
+## Nimosのダウンロードと必須の設定
 1. [NimosのReleasesのページ](https://github.com/hiyok0/Nimos/releases)に行きます。
 2. 一番上にある（最新の）Nimos …… .zipという名前のファイルをダウンロードします。（次回以降はわかりやすいようにNimos+バージョン番号.zipにする予定です。）
 ![mpv.appの中を確認する](/assets/getting-started/Nimos-Releases-Assets.png)
 3. ダウンロードしたzipファイルを解凍します。
 4. 出てきたNimosを必要に応じて移動します。
 :::tip 移動について
-そのままでも使えますが、/Applicationや~/Applicationに移動することでインストールできます。
+そのままでも使えますが、/Applicationや~/Applicationに移動することでインストールできます。  
+
+今後のアップデートで、/Application直下にmpvがインストールされた場合のパスのコマンドをデフォルトにする予定です。
 :::
 5. 副クリックで開くを選択し、起動します。
 ![mpv.appの中を確認する](/assets/getting-started/open-nimos.png)
@@ -104,10 +106,74 @@ Nimosはわんコメには棒読みちゃんとして設定します。
 ![連携メニュー](/assets/getting-started/onecomme-renkei.png)
 ポート番号はNimosのトップ画面のものと一致させてください。
 ![連携メニュー](/assets/getting-started/nimos-portnumber-display.png)
-Nimos側のポート番号を変えることもできます（Nimosの再起動が必要です）。
-:::warning メモ
-詳しい変更方法は後で書く
-:::
-![ポート番号が変更になる表示](/assets/getting-started/nimos-port-change-display.png)
+Nimosの再起動が必要となりますが、Nimos側のポート番号を変えることもできます。
   
 参考：[わんコメ公開ドキュメント「棒読みちゃん連携」](https://onecomme.notion.site/8ba47be790a8411fb293832f222cfd0b)
+
+## Nimos デフォルトの話者の設定
+Nimosではデフォルトの話者がVOICEVOXの３番になっています。設定で変更可能です。
+
+1. Nimosのウィンドウを表示する。
+	* 表示されていない場合はDockのNimosのアイコンを押すことで再表示可能です。
+
+2. 設定を押す。
+![設定を押してるスクリーンショット](/assets/getting-started/nimos-click-settings.png)
+3. 話者の設定を押すと選択できます。
+![話者設定を押してるスクリーンショット](/assets/getting-started/nimos-settings-voicevoxengine-speaker.png) 
+![話者リストをせんたくするやつ](/assets/getting-started/nimos-settings-voicevoxengine-speaker-list.png) 
+::: warning 話者リストが表示されない時
+VOICEVOXと接続されていないか、VOICEVOXに音声モデルが入っていません。詳細は[VOICEVOXのアドレス変更](/)をご参照ください。
+:::
+
+4. 好きな話者を選択します。
+![埼玉のギャルに設定](/assets/getting-started/nimos-settings-saitamagal.png) 
+ここでは埼玉のスーパーギャルに設定してみました。
+
+5. 保存します。
+![設定を保存](/assets/getting-started/nimos-settings-save.png)
+これで多分完了です。ウィンドウを閉じて構いません。（アプリは終了しないでください。）
+![設定完了](/assets/getting-started/nimos-applied.png)
+:::tip もしわからないことがあったら
+お気軽にDiscordサーバー等へどうぞ！
+:::
+
+## Nimosの待受ポートを変更する
+何らかのソフトウェアと干渉し、他のソフトウェアが起動できない、毎回ポート番号が変わってしまう、等の場合に有効かもしれません。
+
+1. Nimosのウィンドウを表示する。
+	* 表示されていない場合はDockのNimosのアイコンを押すことで再表示可能です。
+
+2. 設定を押す。
+![設定を押してるスクリーンショット](/assets/getting-started/nimos-click-settings.png)
+
+3. ListenPortの値を変更する。
+![ListenPortを設定する。](/assets/getting-started/nimos-settings-port.png)
+
+4. 保存します。
+![設定を保存](/assets/getting-started/nimos-settings-save.png)
+
+5. このように、変更後のポート番号も表示されれば完了です。Nimosの次回起動時から適用されるので、すぐに変更したい場合はここでNimosを再起動してください。
+![ポート番号が変更になる表示](/assets/getting-started/nimos-port-change-display.png)
+
+## VOICEVOXの細かい設定
+VOICEVOXを実行するPCとNimosを実行するコンピュータが異なる場合や、VOICEVOXの待受ポート番号が50021(Nimosの初期値)と異なる場合は、ここを参照して設定してください。
+
+1. Nimosのウィンドウを表示する。
+	* 表示されていない場合はDockのNimosのアイコンを押すことで再表示可能です。
+
+2. 設定を押す。
+![設定を押してるスクリーンショット](/assets/getting-started/nimos-click-settings.png)
+
+3. VOICEVOX ENGINEのアドレスとポート番号を設定する。
+![VOICEVOX ENGINEのアドレスとポート番号を設定する](/assets/getting-started/nimos-settings-voicevoxengine-address-and-port.png)
+※設定は例です。
+
+:::warning 注意
+ここでない、本体設定のポート番号はNimosが待ち受けるポート番号を設定するものです。VOICEVOXに送る際のポート番号ではないので注意してください。
+:::
+
+4. 保存します。
+![設定を保存](/assets/getting-started/nimos-settings-save.png)
+
+5. 完了です。
+![設定完了](/assets/getting-started/nimos-applied.png)

@@ -30,6 +30,7 @@ module.exports = {
 	contributors: false,
 	logo: '/apple-touch-icon.png',			//無駄に大きいので後で考える
 	domain: 'https://nimos.pages.dev',
+	sidebarDepth: 3,
     navbar: [
 	  /*
       // NavbarItem
