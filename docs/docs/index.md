@@ -1,5 +1,6 @@
 ---
 title: Docs
+sidebar: false
 ---
 
 # Docs

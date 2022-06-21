@@ -122,7 +122,7 @@ Nimosではデフォルトの話者がVOICEVOXの３番になっています。�
 ![話者設定を押してるスクリーンショット](/assets/getting-started/nimos-settings-voicevoxengine-speaker.png) 
 ![話者リストをせんたくするやつ](/assets/getting-started/nimos-settings-voicevoxengine-speaker-list.png) 
 ::: warning 話者リストが表示されない時
-VOICEVOXと接続されていないか、VOICEVOXに音声モデルが入っていません。詳細は[VOICEVOXのアドレス変更](/)をご参照ください。
+VOICEVOXと接続されていないか、VOICEVOXに音声モデルが入っていません。詳細は[VOICEVOXのアドレス変更](/docs/getting-started/#VOICEVOXの細かい設定)をご参照ください。
 :::
 
 4. 好きな話者を選択します。
