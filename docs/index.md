@@ -9,6 +9,9 @@ actions:
   - text: 使い方・細かい説明
     link: /docs/
     type: secondary
+  - text: Download Nimos
+    link: https://github.com/hiyok0/Nimos/releases
+    type: secondary
 features:
   - title: macOS上で動く
     details: macOS版のわんコメでVOICEVOXの読み上げが利用可能。

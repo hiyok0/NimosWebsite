@@ -46,6 +46,10 @@ module.exports = {
       '/bar/README.md',
       */
       {
+		  text: 'Download Nimos',
+		  link: 'https://github.com/hiyok0/Nimos/releases'
+	  },
+      {
 		  text: 'Docs',
 		  link: '/docs/'
 	  },
