@@ -3,10 +3,10 @@ home: true
 title: Home
 heroImage: /assets/hero.png
 actions:
-  - text: 始める・起動まで
+  - text: 始める・Get Strated
     link: /docs/getting-started/
     type: primary
-  - text: 使い方・細かい説明
+  - text: 使い方・Docs
     link: /docs/
     type: secondary
   - text: Download Nimos
@@ -19,10 +19,10 @@ features:
     details: 欲しい機能があれば自分でつけれちゃう。
   - title: 出力デバイス
     details: 特定のアプリに標準入力を流すだけだから、再生デバイスも選べるし、やろうと思えばそれ以外のことにも使えちゃう自由度！
-  - title: ああああああああ
-    details: ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
-  - title: ああああああああ
-    details: ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+  - title: 実はわんコメ以外でも使えるかもしれない。
+    details: 棒読みちゃんのHTTP形式でのリクエストを模しているため、その形式で送信するアプリの代わりに使える。
+  - title: Linux等でも！？
+    details: Electronが動く環境なら基本機能は大丈夫なはず。（動作確認や想定をあまりしていないため、使うにあたってこうして欲しいとかあれば言ってください。）
 
 
 ---
