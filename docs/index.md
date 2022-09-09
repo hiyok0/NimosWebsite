@@ -16,7 +16,7 @@ features:
   - title: macOS上で動く
     details: macOS版のわんコメでVOICEVOXの読み上げが利用可能。
   - title: OSS
-    details: 欲しい機能があれば自分でつけれちゃう。
+    details: 欲しい機能があれば自分でつけちゃおう！
   - title: 出力デバイス
     details: 特定のアプリに標準入力を流すだけだから、再生デバイスも選べるし、やろうと思えばそれ以外のことにも使えちゃう自由度！
   - title: 実はわんコメ以外でも使えるかもしれない。
